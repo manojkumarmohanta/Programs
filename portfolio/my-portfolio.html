@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 15px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    @media (max-width: 600px) {
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project-card {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Name</h1>
+    <p>Your Tagline</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>Your introduction goes here.</p>
+    </section>
+
+    <section>
+      <h2>My Projects</h2>
+      <div class="projects" id="projects-container">
+        <!-- Projects will be dynamically added here -->
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Example data for projects
+    const projectsData = [
+      { title: 'Project 1', description: 'Description of Project 1' },
+      { title: 'Project 2', description: 'Description of Project 2' },
+      // Add more projects as needed
+    ];
+
+    // Function to dynamically create project cards
+    function createProjectCards() {
+      const projectsContainer = document.getElementById('projects-container');
+
+      projectsData.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.classList.add('project-card');
+
+        const title = document.createElement('h3');
+        title.textContent = project.title;
+
+        const description = document.createElement('p');
+        description.textContent = project.description;
+
+        projectCard.appendChild(title);
+        projectCard.appendChild(description);
+        projectsContainer.appendChild(projectCard);
+      });
+    }
+
+    // Call the function to create project cards when the page loads
+    window.onload = createProjectCards;
+  </script>
+
+</body>
+</html>

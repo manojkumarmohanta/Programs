@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Demo</title>
+    <script>
+        // Problem a: Find the position of the left-most vowel in a string
+        function findLeftMostVowelPosition(inputString) {
+            var vowels = ['a', 'e', 'i', 'o', 'u'];
+            inputString = inputString.toLowerCase();
+
+            for (var i = 0; i < inputString.length; i++) {
+                if (vowels.includes(inputString[i])) {
+                    return i + 1; // Return position (1-based index)
+                }
+            }
+
+            return -1; // Return -1 if no vowel is found
+        }
+
+        // Problem b: Reverse the digits of a number
+        function reverseDigits(inputNumber) {
+            var reversedNumber = parseInt(inputNumber.toString().split('').reverse().join(''));
+            return reversedNumber;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>JavaScript Functions Demo</h2>
+
+    <script>
+        // Example usage of the functions
+        var exampleString = "example";
+        var exampleNumber = 12345;
+
+        var vowelPosition = findLeftMostVowelPosition(exampleString);
+        var reversedNumber = reverseDigits(exampleNumber);
+
+        document.write("<p>Problem a: The left-most vowel in '" + exampleString + "' is at position " + vowelPosition + ".</p>");
+        document.write("<p>Problem b: The reversed digits of " + exampleNumber + " is " + reversedNumber + ".</p>");
+    </script>
+
+</body>
+</html>

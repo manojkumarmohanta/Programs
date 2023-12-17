@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile exa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="option-menu" onclick="menuT();">
+            <img src="option.png" alt="op">
+        </div>
+        <div class="menu1">
+            <h3>Another Options<br><span>google</span></h3>
+            <ul>
+                <li><img src="google.png"><a href="#">Google</a></li>
+                <li><img src="google-add.png"><a href="#">Google Adds</a></li>
+                <li><img src="google-cloud.png"><a href="#">Google Cloud</a></li>
+                <li><img src="google-gmail.png"><a href="#">Google Mail</a></li>
+                <li><img src="google-map.png"><a href="#">Google Map</a></li>
+                <li><img src="google-meet.png"><a href="#">Google Meet</a></li>
+                <li><img src="google-play.png"><a href="#">Google Store</a></li>
+                <li><img src="google-podcast.png"><a href="#">Google Cast</a></li>
+                <li><img src="location.png"><a href="#">Google Location</a></li>
+
+                
+            </ul>
+        </div>
+    </div>
+    <div class="action">
+        <div class="profile" onclick="menuToggle();">
+            <img src="profile-pic.jpg" alt="pic">
+
+        </div>
+        <div class="menu">
+            <h3>Someone Famous<br><span>Website Designer</span></h3>
+            <ul>
+                <li><img src="profile.png"><a href="#">My Profile</a></li>
+                <li><img src="edit.png"><a href="#">Edit Profile</a></li>
+                <li><img src="inbox.png"><a href="#">Inbox</a></li>
+                <li><img src="settings.png"><a href="#">Settings</a></li>
+                <li><img src="help.png"><a href="#">Help</a></li>
+                <li><img src="about.png"><a href="#">About</a></li>
+                <li><img src="logout.png"><a href="#">Logout</a></li>
+
+
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.menu');
+            toggleMenu.classList.toggle('active');
+            
+        }
+        function menuT(){
+            const toggleMenu1 = document.querySelector('.menu1');
+            toggleMenu1.classList.toggle('active');
+        }
+        
+    </script>
+</body>
+</html>

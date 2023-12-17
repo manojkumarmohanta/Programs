@@ -1,0 +1,24 @@
+package studentWebApplication;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class StudentController {
+	private StudentService service;
+
+	public StudentController(StudentService service) {
+		super();
+		this.service = service;
+	}
+	@GetMapping({"/students","/"})
+	public String getAllPerson(Model model) {
+		List<Student> students = service.retriveAllStudent();
+		model.addAttribute("stuents",students);
+		return "index";
+	}
+}
+

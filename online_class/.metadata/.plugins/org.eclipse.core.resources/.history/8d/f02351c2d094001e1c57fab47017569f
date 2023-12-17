@@ -1,0 +1,18 @@
+package StudentWebApplication;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class StudentController {
+	private StudentService service;
+
+	public StudentController() {
+		super();
+		this.service = service;
+	}
+	
+	@GetMapping("/test")
+	public String Test() {
+		return "manoj";
+	}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squares and Cubes Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Squares and Cubes Table</h2>
+
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Square</th>
+            <th>Cube</th>
+        </tr>
+
+        <script>
+            for (var i = 0; i <= 10; i++) {
+                document.write("<tr>");
+                document.write("<td>" + i + "</td>");
+                document.write("<td>" + square(i) + "</td>");
+                document.write("<td>" + cube(i) + "</td>");
+                document.write("</tr>");
+            }
+
+            function square(x) {
+                return x * x;
+            }
+
+            function cube(x) {
+                return x * x * x;
+            }
+        </script>
+    </table>
+
+</body>
+</html>

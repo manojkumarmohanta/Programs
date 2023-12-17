@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Specific Person Page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<body>
+	<h1>The Stdent Information as follows through variable Expression</h1>
+	Student Name : <h2 th:text="${studentdetail.name}">Name</h2>
+	Student Email :<h2 th:text="${studentdetail.email}">Email</h2>
+	<h1>The Student Information as follows through Selection Expresion Expression</h1>
+	<div th:object="${studentdetail}">
+		Student Name : <h2 th:text="*{name}">Name</h2>
+		Student Email :<h2 th:text="*{email}">Email</h2>
+	</div>
+<a href="/welcome">Click Here Go to Welcome</a>
+
+</body>
+</html>

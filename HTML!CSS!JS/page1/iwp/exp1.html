@@ -1,0 +1,55 @@
+<!--write html css js program to create a registration and login page? -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration and Login Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registration</h1>
+    <form action="register.php" method="post">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" value="Register">
+    </form>
+    <h1>Login</h1>
+    <form action="login.php" method="post">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</body>
+</html>

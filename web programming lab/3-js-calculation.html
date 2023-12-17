@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        input {
+            width: 50px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <label for="num1">Number 1:</label>
+    <input type="text" id="num1">
+
+    <label for="num2">Number 2:</label>
+    <input type="text" id="num2">
+
+    <br>
+
+    <button onclick="sum()">Sum</button>
+    <button onclick="product()">Product</button>
+    <button onclick="difference()">Difference</button>
+    <button onclick="quotient()">Quotient</button>
+
+    <br>
+
+    <label for="result">Result:</label>
+    <input type="text" id="result" readonly>
+
+    <script>
+        function sum() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById('result').value = num1 + num2;
+        }
+
+        function product() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById('result').value = num1 * num2;
+        }
+
+        function difference() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById('result').value = num1 - num2;
+        }
+
+        function quotient() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            if (num2 !== 0) {
+                document.getElementById('result').value = num1 / num2;
+            } else {
+                alert("Cannot divide by zero!");
+            }
+        }
+    </script>
+
+</body>
+</html>

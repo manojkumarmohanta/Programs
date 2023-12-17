@@ -1,0 +1,64 @@
+class Time {
+
+    private int hours;
+    private int minutes;
+    private int seconds;
+
+    public Time(int hours, int minutes, int seconds) {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
+   ites;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
+    }
+
+    public int getSeconds() {
+        return seconds;
+    }
+
+    public void setSeconds(int seconds) {
+        this.seconds = seconds;
+    }
+
+    public Time add(Time time) {
+        int newHours = this.hours + time.hours;
+        int newMinutes = this.minutes + time.minutes;
+        int newSeconds = this.seconds + time.seconds;
+
+        while (newSeconds >= 60) {
+            newMinutes++;
+            newSeconds -= 60;
+        }
+
+        while (newMinutes >= 60) {
+            newHours++;
+            newMinutes -= 60;
+        }
+
+        return new Time(newHours, newMinutes, newSeconds);
+    }
+    public static void main(String[] args) {
+    Time time1 = new Time(10, 0, 0);
+    Time time2 = new Time(11, 0, 0);
+
+    Time sum = time1.add(time2);
+
+    System.out.println(sum.getHours() + ":" + sum.getMinutes() + ":" + sum.getSeconds());
+}
