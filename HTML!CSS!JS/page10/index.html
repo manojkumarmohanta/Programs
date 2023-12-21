@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../card/Screenshot (34).png" >
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          function changeProfilePhoto() {
+            const imageUrls = [
+              '../card/Screenshot (33).png',
+              '../card/Screenshot (34).png',
+              '../card/Screenshot (3).png',
+              '',
+              
+            ];
+      
+            const profileImage = document.querySelector('img');
+            const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+            profileImage.src = randomImageUrl;
+          }
+      
+          // Call the function initially
+          changeProfilePhoto();
+      
+          // Call the function every 1000 milliseconds (1 second)
+          setInterval(changeProfilePhoto, 1000);
+        });
+      </script>
+      
+</body>
+</html>

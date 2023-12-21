@@ -1,0 +1,48 @@
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(35, 36, 36);
+
+}
+.container-fluid .frame{
+
+    margin: 40px auto;
+    padding: 0;
+    height: 60vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: hidden;
+    
+}
+.container-fluid .frame:hover{
+    overflow: visible;
+}
+.container-fluid .frame span{
+    display: flex;
+    width:110px;
+    
+    border: 1px solid black;
+    filter: drop-shadow(0 0 10px #fff) opacity(0.5) blur(4px);
+    
+}
+.container-fluid .frame span:hover{
+    width: 300px;
+    transition: 0.5s ease-in-out;
+    filter: opacity(1) blur(0);
+}
+.container-fluid .frame span img{
+    margin: 0;
+    padding: 0;
+    height: 60vh;
+    width: auto;
+    transition: 2s ease-in-out;
+    
+}
+.container-fluid .frame span img:hover{
+    width: 400px;
+}
