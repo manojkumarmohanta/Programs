@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\WORKLOAD\fullstack(springBoot &amp; react)"/>
+			<item value="C:\WORKLOAD\fullstack(springBoot &amp; react)\ems-backend"/>
 			<item value="C:\WORKLOAD\online_class\webApplicationStudentDemo"/>
 			<item value="C:\WORKLOAD\online_class\Spring-web-Thymeleaf"/>
 			<item value="C:\WORKLOAD\online_class\SimpleProjectDemo"/>
