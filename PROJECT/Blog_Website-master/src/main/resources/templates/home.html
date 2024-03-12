@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head data-th-replace="~{fragment :: head-section}"></head>
+
+<body>
+    <link rel="stylesheet" href="/css/style.css">
+    <div class="container">
+        <header data-th-replace="~{fragment :: heading-link-section(url='/add', name='Add Blog')}"></header>
+        <main>
+            <article data-th-each="place,loop : ${blogPlace}">
+                <div class="card mb-3" style="width: 70rem;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="/images/Deomali.png" class="img img-fluid" alt="Deomali Hill">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="card-body">
+                                    <h2 class="card-title" data-th-utext="${place.heading}"></h2>
+                                    <p class="card-text" data-th-utext="${place.description}"></p>
+                                    <a data-th-href="|/explore?id=${place.id}|" class="btn btn-info">Explore</a>
+                                    <a data-th-href="|/update?id=${place.id}|" class="btn btn-warning">Update</a>
+                                    <a data-th-href="|/delete?id=${place.id}|" onclick="return confirm('Are you sure want to delete this blog?')" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col">
+                    <div class="card">
+                        <img src="/images/Mahendragiri-Hills.jpg" class="img-fluid" alt="Mahendragiri Hill">
+                        <div class="card-body">
+                            <h2 class="card-title">Mahendragiri Hill</h2>
+                            <p class="card-text">
+                                Mahendragiri is a mountain in the Rayagada subdivision of the
+                                Gajapati district in Odisha, India. It's the second highest peak in
+                                Odisha, standing at 4,925 ft (1,501 m). Click below to explore more...
+                            </p>
+                            <a href="#" class="btn btn-primary stretched-link">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="/images/malyagiri2.jpg" class="img img-fluid" alt="Malyagiri Hill">
+                        <div class="card-body">
+                            <h2 class="card-title">Malyagiri Hill</h2>
+                            <p class="card-text">
+                                Malayagiri is a mountain peak in the Malayagiri hills subrange of
+                                the Garhjat Range in Odisha. It is the third highest mountain in
+                                Odisha, standing at 1,187 meters (3,894 ft). Click below to explore
+                                more...
+                            </p>
+                            <a href="#" class="btn btn-primary stretched-link">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="/images/kalya-mali.jpg" class="img img-fluid" alt="Daringbadi">
+                        <div class="card-body">
+                            <h2 class="card-title">Kalya Mali Hill</h2>
+                            <p class="card-text">
+                                Kalya Māli is a mountain in the Eastern Ghats of India, located in the Koraput district
+                                of
+                                Odisha. It is the fourth highest peak in Odisha, at 1,548 meters. Click below to
+                                explore more...
+                            </p>
+                            <a href="#" class="btn btn-primary stretched-link">Explore</a>
+                        </div>
+                    </div>
+                </div>-->
+            </article>
+        </main>
+        <footer data-th-replace="~{fragment :: footer-section}"></footer>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+body{
+    background-color: whitesmoke;
+}
+
+.blockquotehead h1{
+    font-size: 3rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:olivedrab;
+    text-shadow: 1.5px 1.5px 3px black;
+}
+
+.navbar p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+}
+
+.btn{
+    color: whitesmoke;
+    border-color: cadetblue;
+    background-color: teal;
+    width: 5rem;
+}
+.btn:hover{
+    background-color: brown;
+    color: white;
+}
+
+form{
+    box-shadow: 5px 9px 8px #888888;
+    display: inline block;
+    background-color:white;
+    padding: 1rem;
+}
