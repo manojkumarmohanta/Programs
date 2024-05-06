@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        input, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <label for="num1">Enter first number:</label>
+    <input type="text" id="num1">
+
+    <label for="num2">Enter second number:</label>
+    <input type="text" id="num2">
+
+    <br>
+
+    <button onclick="calculate('sum')">Sum</button>
+    <button onclick="calculate('product')">Product</button>
+    <button onclick="calculate('difference')">Difference</button>
+    <button onclick="calculate('quotient')">Quotient</button>
+
+    <br>
+
+    <p id="result">Result: </p>
+
+    <script>
+        function calculate(operation) {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerText = "Invalid input. Please enter valid numbers.";
+                return;
+            }
+
+            var result;
+
+            switch (operation) {
+                case 'sum':
+                    result = num1 + num2;
+                    break;
+                case 'product':
+                    result = num1 * num2;
+                    break;
+                case 'difference':
+                    result = num1 - num2;
+                    break;
+                case 'quotient':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        document.getElementById('result').innerText = "Cannot divide by zero.";
+                        return;
+                    }
+                    break;
+                default:
+                    document.getElementById('result').innerText = "Invalid operation.";
+                    return;
+            }
+
+            document.getElementById('result').innerText = "Result: " + result;
+        }
+    </script>
+
+</body>
+</html>

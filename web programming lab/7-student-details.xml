@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <usn>001</usn>
+        <name>Manoj Kumar Mohanta</name>
+        <college>BPUT Engineering College</college>
+        <branch>Computer Science</branch>
+        <yearOfJoining>2021</yearOfJoining>
+        <email>Mohanta.Manoj@example.com</email>
+    </student>
+    
+    <student>
+        <usn>002</usn>
+        <name>Upamanyu Mohanta</name>
+        <college>BPUT Engineering College</college>
+        <branch>Electrical Engineering</branch>
+        <yearOfJoining>2022</yearOfJoining>
+        <email>Mohanta.Upamanyu@example.com</email>
+    </student>
+    
+    <student>
+        <usn>003</usn>
+        <name>Ashis Kumar Mohanta</name>
+        <college>BPUT Engineering College</college>
+        <branch>Mechanical Engineering</branch>
+        <yearOfJoining>2021</yearOfJoining>
+        <email>Mohanta.Ashis@example.com</email>
+    </student>
+</students>
+

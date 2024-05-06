@@ -1,0 +1,20 @@
+code point 
+- --------
+
+-> the most commomnly use unicode character cab be represented with a single coded units, the sublimeentary character required
+a pair of code unit, but if that code traverse in a string each code should have a point that isd called as a "code point".
+
+
+
+code unit
+---------
+
+-> 
+
+building string 
+---------------
+multiple thread to add or remove character
+
+control flow operator
+-selective (user choise)
+-itterative
